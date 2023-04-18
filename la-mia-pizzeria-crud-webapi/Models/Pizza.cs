@@ -7,6 +7,7 @@ namespace la_mia_pizzeria_static.Models
 {
     public class Pizza
     {
+        internal object Nome;
 
         public int Id { get; set; }
 
@@ -29,6 +30,10 @@ namespace la_mia_pizzeria_static.Models
         public int? CategoriaId { get; set; }
         public Categoria? Categoria { get; set; }
         public List<Ingrediente> Ingredients { get; set; }
+        public object Descrizione { get; internal set; }
+        public object Prezzo { get; internal set; }
+        public object Ingridients { get; internal set; }
+
         public Pizza()
         {
             this.Ingredients = new List<Ingrediente>();
